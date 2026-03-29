@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>My girlies</title>
+<title>Girlies</title>
 
 <style>
 body{
-    background:#e6e6fa;
+    background:#fff0f5;
     font-family: Georgia, serif;
     margin:0;
     text-align:center;
@@ -32,9 +32,9 @@ body{
 
 .container{
     display:none;
-    max-width:600px;
+    max-width:700px;
     margin:0 auto;
-    padding-top:80px;
+    padding-top:60px;
 }
 
 .top-image{
@@ -44,9 +44,17 @@ body{
     cursor:pointer;
 }
 
+.paper{
+    background:white;
+    padding:40px;
+    border-radius:4px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
 #text{
     font-size:18px;
-    line-height:1.8;
+    line-height:1.9;
     white-space:pre-line;
 }
 </style>
@@ -56,7 +64,7 @@ body{
 
 <div id="cover">
 <div class="letter">
-To my girlies
+To my girlfriends
 </div>
 </div>
 
@@ -67,21 +75,29 @@ To my girlies
      class="top-image"
      onclick="changeImage()">
 
+<div class="paper">
 <div id="text"></div>
+</div>
 
 </div>
 
 <audio id="music" loop>
-<source src="Ian Quiruz - ang balikat at baywang (Lyric video).mp3" type="audio/mpeg">
+<source src="The Ridleys - Someday (Lyrics).mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  <div id="letter" class="letter">
-      
-const message = Thank you mga gf ko.
-</p>   
-<p>
-I honestly don’t know how we function as a group… but somehow we do. Thanks for the chaos, the laughs, and for not replacing me (yet). I know kailan lang tayo naging magkaka-close (bakit kasi end pa ng s.y, le is che.) Pero kahit recently lang tayo, know that I love you both, always.`;
+const message = `Kass, Ysa
+
+We’re actually graduating… and I still can’t believe they’re letting the three of us leave together. Thank you for surviving school with me — from cramming at the last minute, pretending we understood the lesson, to laughing when we were definitely supposed to be serious. We started as classmates, then somehow became a trio that shared notes, snacks, stress, and zero brain cells during exams.
+
+Thank you for the chaos, the inside jokes that no one else understands, the random deep talks, and the moments where we just looked at each other and knew we were all equally lost. Honestly, I don’t know how we made it this far, but I’m glad I did it with you two.
+
+Even though we’re graduating and might go different ways, I hope we still stay the same — still loud, still supportive, still making fun of each other, and still meeting up like no time passed. School won’t be the same without our trio energy, but I’m grateful for every memory we made.
+
+Thanks for making these years less stressful and way more fun. I’ll miss our daily chaos, but I’m excited for what’s next for all of us. No matter where life takes us, we’ll always be that trio that somehow survived everything together.
+Love you both always!
+
+— ce`;
 
 let i = 0;
 let opened = false;
@@ -90,7 +106,7 @@ function type(){
     if(i < message.length){
         document.getElementById("text").innerHTML += message.charAt(i);
         i++;
-        setTimeout(type, 28);
+        setTimeout(type, 22);
     }
 }
 
